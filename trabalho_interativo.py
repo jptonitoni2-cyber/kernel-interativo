@@ -32,8 +32,8 @@ sinal_N = np.sign(N)
 gaussiano = np.exp(-(M**2 + N**2) / (2 * (sigma**2)))
 K = -sinal_M * sinal_N * gaussiano
 
-# Layout em duas colunas para o trabalho ficar elegante
-col1, col2 = st.columns([1, 1])
+# Layout em duas colunas
+col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("Visualização Matriz (Heatmap)")
@@ -42,7 +42,7 @@ with col1:
         colorscale='RdBu', zmin=-1, zmax=1
     ))
     fig_heatmap.update_layout(xaxis_title="m", yaxis_title="n", height=450)
-     st.plotly_chart(fig_heatmap)
+    st.plotly_chart(fig_heatmap)
 
 with col2:
     st.subheader("Superfície 3D Interativa")
