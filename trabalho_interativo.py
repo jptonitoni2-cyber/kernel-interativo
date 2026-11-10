@@ -42,7 +42,7 @@ with col1:
         colorscale='RdBu', zmin=-1, zmax=1
     ))
     fig_heatmap.update_layout(xaxis_title="m", yaxis_title="n", height=450)
-    st.plotly_chart(fig_heatmap, use_container_width=True)
+     st.plotly_chart(fig_heatmap)
 
 with col2:
     st.subheader("Superfície 3D Interativa")
@@ -54,7 +54,7 @@ with col2:
         scene=dict(xaxis_title='m', yaxis_title='n', zaxis_title='K(m,n)'),
         height=450
     )
-    st.plotly_chart(fig_3d, use_container_width=True)
+    st.plotly_chart(fig_3d)
 
 # Exibição dos valores numéricos da matriz gerada
 st.subheader("Valores Numéricos da Matriz do Kernel")
