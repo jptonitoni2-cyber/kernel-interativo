@@ -18,7 +18,7 @@ st.latex(r"K_w(m, n) = -\text{sinal}(m) \cdot \text{sinal}(n) \cdot \exp\left( -
 st.caption("Nota: $K_w(m, n) = 0$ sempre que $m = 0$ ou $n = 0$.")
 
 # --- ABAS PARA ORGANIZAÇÃO DO CONTEÚDO ---
-tab1, tab2, tab3 = st.tabs([" O Gráfico de Cúpula", " Teste de Permutação (Linhas Pretas)", "🕹️ Simulador de Parâmetros"])
+tab1, tab2, tab3 = st.tabs([" O Gráfico de Cúpula", " Teste de Permutação (Linhas Pretas)", " Simulador de Parâmetros"])
 
 # Gerando dados sintéticos realistas para a simulação de 1960 a 2010
 anos = np.arange(1960, 2010.25, 0.25)
