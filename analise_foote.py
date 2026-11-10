@@ -5,20 +5,20 @@ import plotly.graph_objects as go
 # Configuração da página do Streamlit
 st.set_page_config(page_title="Interpretador da Novidade de Foote", layout="wide")
 
-st.title("📊 Interpretador Interativo: Novidade de Foote")
+st.title(" Interpretador Interativo: Novidade de Foote")
 st.markdown("""
 Este aplicativo foi desenvolvido para explicar a estrutura, dinâmica e formulação matemática do 
 **Gráfico de Novidade de Foote**, mapeando mudanças estruturais ao longo do tempo.
 """)
 
 # --- EQUAÇÕES EM DESTAQUE ---
-st.info("### 🧮 Formulação Matemática Utilizada")
+st.info("###  Formulação Matemática Utilizada")
 st.latex(r"N(i, w) = \sum_{m=-w}^{w} \sum_{n=-w}^{w} K_w(m, n) \cdot D(i + m, i + n)")
 st.latex(r"K_w(m, n) = -\text{sinal}(m) \cdot \text{sinal}(n) \cdot \exp\left( -\frac{m^2 + n^2}{2\sigma^2} \right) \quad \text{com } \sigma = 0.4 \cdot w")
 st.caption("Nota: $K_w(m, n) = 0$ sempre que $m = 0$ ou $n = 0$.")
 
 # --- ABAS PARA ORGANIZAÇÃO DO CONTEÚDO ---
-tab1, tab2, tab3 = st.tabs(["📈 O Gráfico de Cúpula", "🧪 Teste de Permutação (Linhas Pretas)", "🕹️ Simulador de Parâmetros"])
+tab1, tab2, tab3 = st.tabs([" O Gráfico de Cúpula", " Teste de Permutação (Linhas Pretas)", "🕹️ Simulador de Parâmetros"])
 
 # Gerando dados sintéticos realistas para a simulação de 1960 a 2010
 anos = np.arange(1960, 2010.25, 0.25)
