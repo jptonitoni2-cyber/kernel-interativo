@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import pandas as pd
 import plotly.graph_objects as go
 
 # Configuracao da pagina do Streamlit
@@ -109,14 +110,14 @@ with tab3:
     A analise de enriquecimento aponta exatamente quais estilos protagonizaram a troca estrutural observada em 1991:
     """)
     
-    # Criando uma tabela para apresentar os coeficientes de forma escaneavel
+    # Criando o dicionario de dados corrigido com a sintaxe correta do Python
     dados_regressao = {
         "Estilo": ["Estilo 2", "Estilo 13", "Estilo 5"],
         "Genero Associado": ["Hip-hop, Rap, Old school, Gangsta rap", "Hard rock, Hair metal, Metal", "Outros generos em declinio"],
-        "Coeficiente Linear (Beta 1)",
-        "Coeficiente Quadratico (Beta 2)",
-        "Significancia (p-value)",
-        "Comportamento"
+        "Coeficiente Linear (Beta 1)": [0.325, -0.207, -0.085],
+        "Coeficiente Quadratico (Beta 2)": [0.000, -0.112, 0.000],
+        "Significancia (p-value)": ["p < 0.001", "p < 0.001", "p = 0.003"],
+        "Comportamento": ["Sobe de forma proeminente", "Desce (queda acelerada)", "Desce de forma linear"]
     }
     st.table(pd.DataFrame(dados_regressao))
     
