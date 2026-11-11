@@ -22,7 +22,7 @@ st.markdown("""
 * **Interpretacao do p-value:** Quanto menor o p, mais surpreendente e encontrar tantas musicas com aquela tag no estilo se a tag estivesse espalhada ao acaso.
 * **Correcao de Multiplos Testes:** O GeneMerge usa essa distribuicao e corrige o p pelo numero de tags testadas utilizando o metodo de Bonferroni modificado.
 * **Evidencias nos Estilos:** Gracas a essa abordagem, o **Estilo 2** aparece fortemente associado a generos como *hip-hop, rap, old school e gangsta rap*, enquanto o **Estilo 13** destaca-se associado a *hard rock, hair metal e metal*.
-* **Transicao Historica:** O ajuste quadratico dos dados globais mostra que houve uma troca de estilos marcante no ano de 1991, e a analise de enriquecimento e a ferramenta que revela exatamente quais foram os estilos envolvidos nessa transicao.
+* **Transicao Historica:** O ajuste quadratico dos dados globais mostra que houve uma troca de styles marcante no ano de 1991, e a analise de enriquecimento e a ferramenta que revela exatamente quais foram os estilos envolvidos nessa transicao.
 """)
 
 # --- INTERFACE DE SIMULACAO ---
@@ -56,7 +56,7 @@ with col2:
     
     df_plot = pd.DataFrame({
         'Ambiente': ['Universo Total', 'Dentro do Estilo'],
-        'Percentual da Tag (%)': [proporcao_universo, proportion_estilo]
+        'Percentual da Tag (%)': [proporcao_universo, proporcao_estilo]
     })
     fig = px.bar(df_plot, x='Ambiente', y='Percentual da Tag (%)', color='Ambiente', 
                  text=df_plot['Percentual da Tag (%)'].apply(lambda x: f'{x:.1f}%'))
